@@ -1,10 +1,6 @@
 ﻿using BethanysPieShop.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BethanysPieShop.Controllers
 {
@@ -31,7 +27,7 @@ namespace BethanysPieShop.Controllers
 			var items = _shoppingCart.GetShoppingCartItems();
 			_shoppingCart.ShoppingCartItems = items;
 
-			if(_shoppingCart.ShoppingCartItems.Count == 0)
+			if (_shoppingCart.ShoppingCartItems.Count == 0)
 			{
 				ModelState.AddModelError("", "Your cart is empty, add some pies first");
 			}
